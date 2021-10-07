@@ -23,16 +23,17 @@ body {
   --shadow: #2b2d31;
   --bg-text: #a6b9d3;
   --quote: #fcfc8a;
+  --alias: #0000ff;
 
   /* fonts */
-  --content: "Open Sans", sans-serif;
-  --head: "Roboto", sans-serif;
+  --headings: "Oswald", sans-serif;
+  --content: "Roboto", sans-serif;
 
   /* font size */
-  --h1: clamp(1.8rem, 3.2vw, 50px);
-  --h2: clamp(1.3rem, 2.3vw, 30px);
-  --h3: clamp(1.15rem, 1.9vw, 24px);
-  --text: clamp(1rem, 1.7vw, 21px);
+  --h1: clamp(2rem, 5.5vw, 75px);
+  --h2: clamp(1.2rem, 2.5vw, 35px);
+  --h3: clamp(1rem, 2vw, 28px);
+  --text: clamp(0.8rem, 1.7vw, 21px);
 }
 
 h1,
@@ -43,18 +44,20 @@ h3 {
 
 h2 {
   font-size: var(--h2);
-  font-family: var(--content);
+  font-family: var(--headings);
+  font-weight: 600;
   text-align: center;
 }
 
 h3 {
   font-size: var(--h3);
-  font-family: var(--content);
+  font-family: var(--headings);
+  font-weight: 500;
 }
 
 a {
   text-decoration: none;
-  color: var(--bg-text);
+  color: #6488ff;
 }
 
 li,
@@ -63,6 +66,7 @@ p {
   list-style: none;
   font-size: var(--text);
   font-family: var(--content);
+  font-weight: 400;
 }
 
 #main {
@@ -81,44 +85,53 @@ p {
   gap: 0.5rem;
 }
 
-#header p {
-  color: var(--bg-text);
+.alias {
+  font-size: var(--h2);
+  font-family: var(--headings);
+  -webkit-text-stroke: 0.05rem var(--bg-text);
+  font-weight: 700;
+  text-shadow: 0.1rem 0.1rem 0.2rem black, 0 0 0.5rem blue, 0 0 0.5rem blue;
 }
 
 #title {
   font-size: var(--h1);
-  font-family: var(--head);
-  color: var(--bg-text);
+  font-family: var(--headings);
+  -webkit-text-stroke: 0.1rem var(--bg-text);
+  font-weight: 700;
+  text-shadow: 0.1rem 0.1rem 0.2rem black, 0 0 0.5rem blue, 0 0 0.5rem blue;
 }
 
 #img-div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(0.5rem, 2.8vw, 40px);
   width: 100%;
   min-width: clamp(330px, 10vw, 100%);
   padding: clamp(0.75rem, 2.2vw, 30px);
   background: linear-gradient(
     0deg,
-    rgba(255, 255, 0, 0.75) 0%,
-    rgba(95, 95, 255, 0.75) 56%,
-    rgba(0, 0, 255, 0.75) 100%
+    rgba(255, 255, 0, 0.85) 0%,
+    rgba(95, 95, 255, 0.9) 56%,
+    rgba(0, 0, 255, 0.9) 100%
   );
   border-style: solid;
   border-color: var(--shadow);
   border-radius: 5px;
+  border-width: 0.2px;
+  box-shadow: 0 0 8px 3px var(--shadow);
 }
 
 #image {
   max-width: 80%;
   border-radius: 5px;
+  margin: clamp(0.25rem, 1.8vw, 25px) 0 clamp(0.25rem, 1.8vw, 25px);
 }
 
 #img-caption {
   width: 70%;
   font-size: var(--text);
-  font-family: var(--content);
+  font-family: var(--headings);
+  font-weight: 500;
   text-align: center;
 }
 
@@ -131,13 +144,15 @@ p {
   min-width: 300px;
   padding: clamp(0.75rem, 2.2vw, 30px);
   background: linear-gradient(
-    rgba(255, 250, 68, 0.85) 0%,
-    rgba(255, 249, 177, 0.85) 32%,
-    rgba(255, 254, 238, 0.85) 100%
+    rgba(255, 250, 68, 0.9) 0%,
+    rgba(255, 249, 177, 0.92) 32%,
+    rgba(255, 254, 238, 0.95) 100%
   );
   border-style: solid;
   border-color: var(--shadow);
-  border-radius: 15px;
+  border-radius: 10px;
+  border-width: 0.2px;
+  box-shadow: 0 0 8px 3px var(--shadow);
 }
 
 .tribute-info__list {
@@ -152,7 +167,7 @@ p {
   margin: 0 auto;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 4px 2px -2px #888888;
+  box-shadow: 0 5px 2px -2px #888888;
 }
 
 .link {
