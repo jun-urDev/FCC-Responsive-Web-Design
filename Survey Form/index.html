@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FCC-Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">BeNum Survey</h1>
+      <p id="description">
+        Help us know about your best interest in boxing merch
+      </p>
+    </header>
+    <form id="survey-form" action="/">
+      <p>
+        Required fields are followed by
+        <abbr title="required">*</abbr>
+      </p>
+      <div class="name-field">
+        <label id="name-label" for="name"
+          >Name
+          <abbr class="required" title="required" aria-label="required"
+            >*</abbr
+          ></label
+        >
+        <input
+          type="text"
+          id="name"
+          name="input-name"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+
+      <div class="email-field">
+        <label id="email-label" for="email"
+          >Email
+          <abbr class="required" title="required" aria-label="required"
+            >*</abbr
+          ></label
+        >
+        <input
+          type="email"
+          id="email"
+          name="input-email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      <div class="age-field">
+        <label id="number-label" for="input-number">Age(optional)</label>
+        <input
+          type="number"
+          id="number"
+          name="input-number"
+          placeholder="Age"
+          min="1"
+          max="100"
+        />
+      </div>
+
+      <div class="dropdown-bar">
+        <label for="dropdown">Gender</label>
+        <select name="gender" id="dropdown">
+          <option value="">--Please Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>Are you interested in a title belt replica?</legend>
+        <div class="radio-group">
+          <input type="radio" id="belt-yes" name="belt-answer" value="yes" />
+          <label for="belt-yes">Yes</label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" id="belt-no" name="belt-answer" value="no" />
+          <label for="belt-no">No</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What's your favorite Weight Classes?</legend>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight48" name="weight" value="48" />
+          <label for="weight48">Minimumweight, 105lbs (48kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight49" name="weight" value="49" />
+          <label for="weight49">Light Flyweight, 108lbs (49kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight51" name="weight" value="51" />
+          <label for="weight49">Flyweight, 112lbs (51kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight52" name="weight" value="52" />
+          <label for="weight52">Super Flyweight, 115lbs (52kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight53.5" name="weight" value="53.5" />
+          <label for="weight53.5">Bantamweight, 118lbs (53.5kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight55" name="weight" value="55" />
+          <label for="weight55">Super Bantamweight, 122lbs (55kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight57" name="weight" value="57" />
+          <label for="weight57">Featherweight, 126lbs (57kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight59" name="weight" value="59" />
+          <label for="weight59">Super Featherweight, 130lbs (59kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight61" name="weight" value="61" />
+          <label for="weight61">Lightweight, 135lbs (61kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight63.5" name="weight" value="63.5" />
+          <label for="weight63.5">Super Lightweight, 140lbs (63.5kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight67" name="weight" value="67" />
+          <label for="weight67">Welterweight, 147lbs (67kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight70" name="weight" value="70" />
+          <label for="weight70">Super Welterweight, 154lbs (70kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight72.5" name="weight" value="72.5" />
+          <label for="weight72.5">Middleweight, 160lbs (72.5kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight76" name="weight" value="76" />
+          <label for="weight76">Super Middleweight, 168lbs (76kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight79" name="weight" value="79" />
+          <label for="weight79">Light Heavyweight, 175lbs (79kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight91" name="weight" value="91" />
+          <label for="weight91">Cruiserweight, 200lbs (91kg)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="weight91+" name="weight" value="91+" />
+          <label for="weight91+">Heavyweight, Unlimited</label>
+        </div>
+      </fieldset>
+      <div>
+        <label for="textarea">Any comments or suggestions for our merch</label>
+        <textarea name="textarea" id="textarea" rows="5">
+Enter comment here...</textarea
+        >
+      </div>
+      <div>
+        <button class="button" type="submit" id="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
